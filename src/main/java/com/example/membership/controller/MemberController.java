@@ -123,9 +123,10 @@ public class MemberController {
 
 
     //회원 탈퇴
-    @DeleteMapping("delete")
-    public String delete(MemberDto memberDto){
+    @GetMapping("/quit")
+    public String delete(){
 
+        System.out.println("sssssssssssssssssss");
         memberRepository.deleteById(userID);
 
         return "intro";
